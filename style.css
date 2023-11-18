@@ -687,23 +687,15 @@ span {
         transition-delay: .25s;
     }
 }
-@media (max-width: 520px) {
-    html {
-        font-size: 50%;
+@media (max-width: 768px) {
+    .home-content {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center items horizontally on smaller screens */
     }
 
-    .home-content h1 {
-        display: flex;
-        flex-direction: column;
-    }
     .home-sci {
-        width: 160px;
+        margin-top: 20px; /* Add some space between .btn-box and .home-sci on smaller screens */
     }
-    .home-sci a {
-        width: 38px;
-        height: 38px;
-    }
-
 }
 
 @media (max-width: 462px) {
