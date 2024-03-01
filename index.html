@@ -244,26 +244,7 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="script.js"></script>
-    <script>
-        $(document).ready(function() {
-            // Form submission handling
-            $('#contactForm').submit(function(e) {
-                e.preventDefault(); // Prevent the default form submission behavior
-                
-                var formData = $(this).serialize(); // Serialize form data
-                
-                // Call server-side Google Apps Script function
-                google.script.run.withSuccessHandler(function(response) {
-                    // Display thank you message
-                    $('#msg').text('Thank you for your message!');
-                    $('#contactForm')[0].reset(); // Reset form
-                }).withFailureHandler(function(error) {
-                    // Display error message
-                    $('#msg').text('Error: ' + error);
-                }).submitForm(formData);
-            });
-        });
-    </script>
+
        
     <!-------------------------- Footer section -------------------------->
    <footer class="footer">
